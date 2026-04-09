@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+import "@/app/globals.css";
+import { Footer, NavBar } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Dudex Template Site",
-  description: "Generated from Dudex-Projects template",
+  title: "Professional website",
+  description:
+    "A modern, conversion-focused professional website built to showcase services, build trust, and turn interest into action."
 };
 
 export default function RootLayout({
-  children,
-}: {
+  children
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="min-h-screen bg-white text-slate-900 antialiased">
+        <NavBar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
