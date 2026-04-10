@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "We help ambitious teams show up with clarity, confidence, and
-              credibility.",
-  description: "Learn more about we help ambitious teams show up with clarity, confidence, and
-              credibility.",
+  title: "We help ambitious teams show up with clarity, confidence, and credibility.",
+  description:
+    "Learn more about how we help ambitious teams show up with clarity, confidence, and credibility.",
 };
 
 import { Breadcrumbs, FeatureCard, SectionHeading, TeamMemberCard } from "@/components";

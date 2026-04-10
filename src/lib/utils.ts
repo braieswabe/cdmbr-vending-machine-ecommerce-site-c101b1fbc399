@@ -1,3 +1,6 @@
-// Auto-generated stub for lib/utils
-export default {};
-export const cn = null;
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}

@@ -4,11 +4,14 @@ import { cn } from "@/lib/utils";
 export type TestimonialCardProps = {
   icon: ReactNode;
   title: string;
-  description: string;
+  description: ReactNode;
   className?: string;
 };
 
 export function TestimonialCard({ icon, title, description, className }: TestimonialCardProps) {
+  const isPlainText =
+    typeof description === "string" || typeof description === "number";
+
   return (
     <article
       className={cn(
@@ -20,7 +23,11 @@ export function TestimonialCard({ icon, title, description, className }: Testimo
         {icon}
       </div>
       <h3 className="text-lg font-semibold tracking-tight text-foreground">{title}</h3>
-      <p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p>
+      {isPlainText ? (
+        <p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p>
+      ) : (
+        <div className="mt-3 text-sm leading-6 text-muted-foreground">{description}</div>
+      )}
     </article>
   );
 }

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "A polished digital presence that helps your business win better
-                opportunities.",
-  description: "Learn more about a polished digital presence that helps your business win better
-                opportunities.",
+  title: "A polished digital presence that helps your business win better opportunities.",
+  description:
+    "Learn more about a polished digital presence that helps your business win better opportunities.",
 };
 
 import Link from "next/link";
@@ -21,12 +20,12 @@ import {
 } from "@/components";
 
 const trustedLogos = [
-  "Northstar Health",
-  "Aster & Co.",
-  "Summit Retail",
-  "BluePeak Finance",
-  "Harborline Studio",
-  "Vertex Labs",
+  { name: "Northstar Health" },
+  { name: "Aster & Co." },
+  { name: "Summit Retail" },
+  { name: "BluePeak Finance" },
+  { name: "Harborline Studio" },
+  { name: "Vertex Labs" },
 ];
 
 const benefits = [
